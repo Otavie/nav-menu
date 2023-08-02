@@ -20,10 +20,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -55,6 +51,10 @@ html {
 
 .container {
   min-height: 150vh;
+}
+
+body {
+  background-color: var(--blue-linkedin);
 }
 
 header {
@@ -211,20 +211,17 @@ ul li:hover {
 }
 
 @media only screen and (min-width: 900px) {
-  body {
-    background-color: var(--blue-linkedin);
-    background-color: #CCC;
-  }
   .hamburger {
     display: none;
   }
   .nav {
-    width: calc(100% - 150px);
+    width: calc(97% - 150px);
     overflow: hidden;
     height: 80px;
     top: 0;
     transform: translateX(0%);
     transition: transform 0.5s ease-in-out;
+    transition: width ease-in-out 400ms;
   }
   .nav ul {
     display: flex;
@@ -239,5 +236,19 @@ ul li:hover {
   }
   .nav ul a {
     padding: 10px 35px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .nav {
+    width: calc(87% - 150px);
+    transition: width ease-in-out 400ms;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  .nav {
+    width: calc(80% - 150px);
+    transition: width ease-in-out 400ms;
   }
 }
